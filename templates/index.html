@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guest Information</title>
+    <style>
+        /* Estilos para la tabla */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Estilos para el título */
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding-top: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Guest Information</h1>
+    <table id="guest-info-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Hostname</th>
+                <th>IP</th>
+                <th>Disk Usage</th>
+                <th>RAM Usage</th>
+                <th>CPU Usage</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

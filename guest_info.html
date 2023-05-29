@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guest Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guest Information</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Hostname</th>
+                <th>IP</th>
+                <th>Disk Usage</th>
+                <th>RAM Usage</th>
+                <th>CPU Usage</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in guest_info %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
